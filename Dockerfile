@@ -30,7 +30,7 @@ RUN echo "http://dl-cdn.alpinelinux.org/alpine/edge/testing" >> /etc/apk/reposit
     php7-iconv \ 
 #    php7-pdo_dblib \ 
     php7-curl \ 
-#    php7-fpm \
+    php7-fpm \
     php7-ctype 
     
 RUN apk add mysql mysql-client bash nginx ca-certificates && \
@@ -41,7 +41,7 @@ RUN apk add mysql mysql-client bash nginx ca-certificates && \
   mkdir -p /var/run/mysql/ 
 
 ADD files/nginx.conf /etc/nginx/
-#ADD files/php-fpm.conf /etc/php/
+ADD files/php-fpm.conf /etc/php/
 ADD files/my.cnf /etc/mysql/
 ADD files/default.conf /etc/nginx/conf.d/
 ADD files/run.sh /
