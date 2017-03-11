@@ -1,0 +1,11 @@
+stages:   
+  - build   
+  - upload   
+  - publish
+before_script:
+  - docker info
+
+build_image:
+  stage: build 
+  script:
+    - docker build -t docker-mlf .
