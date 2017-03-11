@@ -14,7 +14,7 @@ fi
 
 # start php-fpm
 mkdir -p /data/logs/php-fpm
-php-fpm
+php-fpm &
 
 # start mysql
 mysqld --skip-grant-tables &
@@ -24,4 +24,5 @@ mkdir -p /data/logs/nginx
 mkdir -p /data/logs/php-fpm
 mkdir -p /tmp/nginx
 chown nginx /tmp/nginx
-nginx
+nginx &
+bash
