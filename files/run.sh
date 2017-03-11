@@ -14,7 +14,7 @@ fi
 
 # start php-fpm
 mkdir -p /data/logs/php-fpm
-php-fpm &
+php-fpm7 &
 
 # start mysql
 mysqld --skip-grant-tables &
