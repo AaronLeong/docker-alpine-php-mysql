@@ -9,3 +9,20 @@ build_image:
   stage: build 
   script:
     - docker build -t docker-alpine-php-mysql .
+update_remote:
+  stage: upload
+  variables:
+    REPO_NAME: "docker-alpine-php-mysql"
+  script:
+    - cd $HOME
+    - rm -rf $REPO_NAME.git    
+    - git clone --bare http://192.168.177.120:10080/web/$REPO_NAME.git
+    - cd $REPO_NAME.git
+    - git push --mirror git@github.com:cutec-chris/$REPO_NAME.git
+    - cd ..
+    - rm -rf $REPO_NAME.git
+
+build_docker:
+  stage: publish 
+  script:
+    - curl -X POST https://registry.hub.docker.com/u/cutec/promet-client/trigger/e75e9bec-3207-4b33-82ad-99d1157902b7/
