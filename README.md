@@ -2,14 +2,6 @@
 - nginx (1.8.0)
 - php-fpm (5.6.15)
 - mysql (mariadb 10.1.8)
-- git (2.6.3)
-- composer
-
-## Build
-
-```
-docker build -t ball6847/nginx-php-mysql .
-```
 
 ## RUN
 
@@ -20,7 +12,7 @@ docker run -d \
   -v $PWD/data:/var/lib/mysql \
   -v $PWD/logs:/data/logs \
   -v $PWD:/data/htdocs \
-  ball6847/nginx-php-mysql
+  cutec/docker-alpine-php-mysql
 ```
 
 ## CREDIT
