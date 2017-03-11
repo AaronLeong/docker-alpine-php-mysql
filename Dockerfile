@@ -33,7 +33,7 @@ RUN echo "http://dl-cdn.alpinelinux.org/alpine/edge/testing" >> /etc/apk/reposit
     php7-ctype \ 
     php7-fpm
     
-RUN apk add curl wget git mysql mysql-client bash nginx ca-certificates && \
+RUN apk add mysql mysql-client bash nginx ca-certificates && \
   apk add -u musl && \
   mkdir -p /var/lib/mysql && \
   mkdir -p /etc/mysql/conf.d && \
@@ -45,7 +45,6 @@ ADD files/php-fpm.conf /etc/php/
 ADD files/my.cnf /etc/mysql/
 ADD files/default.conf /etc/nginx/conf.d/
 ADD files/run.sh /
-RUN git clone https://github.com/ilosuna/mylittleforum.git /data/htdocs
 RUN chmod +x /run.sh
 
 EXPOSE 80
