@@ -14,9 +14,3 @@ docker run -d \
   -v $PWD:/data/htdocs \
   cutec/docker-alpine-php-mysql
 ```
-
-## CREDIT
-
-- https://github.com/psi-4ward/dockerphp-nginx
-- https://github.com/geshan/docker-php-composer-alpine
-- https://github.com/iMega/mysql
