@@ -12,6 +12,10 @@ if [ ! -f /var/lib/mysql/ibdata1 ]; then
   mysql_install_db
 fi
 
+# start php-fpm
+mkdir -p /data/logs/php-fpm
+php-fpm
+
 # start mysql
 mysqld --skip-grant-tables &
 
