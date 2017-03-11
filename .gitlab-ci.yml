@@ -8,4 +8,4 @@ before_script:
 build_image:
   stage: build 
   script:
-    - docker build -t docker-mlf .
+    - docker build -t docker-alpine-php-mysql .
