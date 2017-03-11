@@ -24,5 +24,4 @@ mkdir -p /data/logs/nginx
 mkdir -p /data/logs/php-fpm
 mkdir -p /tmp/nginx
 chown nginx /tmp/nginx
-nginx &
-bash
+nginx
