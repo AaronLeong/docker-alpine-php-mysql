@@ -29,7 +29,8 @@ RUN echo "http://dl-cdn.alpinelinux.org/alpine/edge/testing" >> /etc/apk/reposit
     php7-bz2 \ 
     php7-iconv \ 
 #    php7-pdo_dblib \ 
-    php7-curl \ 
+    php7-curl \
+    php7-session \
     php7-fpm \
     php7-ctype 
     
