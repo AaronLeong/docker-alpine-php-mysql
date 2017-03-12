@@ -16,6 +16,7 @@ RUN echo "http://dl-cdn.alpinelinux.org/alpine/edge/testing" >> /etc/apk/reposit
     php7-pdo \ 
     php7-zip \ 
     php7-mysqli \ 
+    php7-mysqlnd \ 
 #    php7-sqlite3 \ 
 #    php7-pdo_pgsql \ 
     php7-bcmath \ 
